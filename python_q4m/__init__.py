@@ -31,6 +31,7 @@ Simple example of usage is followings
    >>>     print res['id']
    >>>     print res['msg']
    >>>     q.end()
+   >>>     con.close()
    >>> except MySQLdb.Error, e:
    >>>     print 'Error %d: %s' % (e.args[0], e.args[1])
    >>>     q.abort()

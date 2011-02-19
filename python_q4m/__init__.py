@@ -5,9 +5,9 @@ __author__  = "Tatsuhiko Kubo (cubicdaiya@gmail.com)"
 __version__ = "0.0.4"
 __license__ = "GPL2"
 __doc__     = """
-   This module is simple Q4M operation wrapper developed by pixiv Inc. for asynchronous upload system
+This module is simple Q4M operation wrapper developed by pixiv Inc. for asynchronous upload system
 
-   Simple example of usage is followings
+Simple example of usage is followings
 
    >>> from python_q4m.q4m import *
    >>> class QueueTable(Q4M):
@@ -35,13 +35,14 @@ __doc__     = """
    >>>     print 'Error %d: %s' % (e.args[0], e.args[1])
    >>>     q.abort()
    >>>     con.close()
-   
-   And it is necessary to create following table for above example
-   
-   >>> CREATE TABLE `queue_table` (
-   >>>    `id` int(11) NOT NULL,
-   >>>    `msg` text NOT NULL
-   >>> ) ENGINE=QUEUE;
+
+And it is necessary to create following table for above example
+
+   CREATE TABLE `queue_table` (
+   `id` int(11) NOT NULL,
+   `msg` text NOT NULL
+   ) ENGINE=QUEUE;
+
 """
 
  

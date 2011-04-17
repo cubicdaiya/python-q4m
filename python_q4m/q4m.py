@@ -14,9 +14,11 @@ class Q4M(object):
         cur.close()
         return ret
 
-    def wait(self):
+    def wait(self, tm = None):
         cur = self.con.cursor()
-        cur.execute('SELECT queue_wait(\'' + self.table + '\')')
+        sql = 'SELECT queue_wait(\'' + self.table + '\'%s)'
+        sql = self._set_tm(sql, tm)
+        cur.execute(sql)
         ret = cur.fetchone()[0]
         cur.close()
         return ret
@@ -45,3 +47,11 @@ class Q4M(object):
         elif res == 0:
             raise MySQLdb.Error(res, "queue is empty.")
         return cur.fetchone()
+
+    def _set_tm(self, sql, tm):
+        if tm is not None and isinstance(tm, int) :
+            sql = sql % (', ' + str(tm))
+        else:
+            sql = sql % ''
+        return sql
+        

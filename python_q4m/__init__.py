@@ -2,7 +2,7 @@
 import python_q4m
 
 __author__  = "Tatsuhiko Kubo (cubicdaiya@gmail.com)"
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 __license__ = "GPL2"
 __doc__     = """
 This module is simple Q4M operation wrapper developed by pixiv Inc. for asynchronous upload system
@@ -37,13 +37,8 @@ Simple example of usage is followings
    >>>     q.abort()
    >>>     con.close()
 
-And it is necessary to create following table for above example
+And it is necessary to create following table for above example.
 
-   CREATE TABLE `queue_table` (
-   `id` int(11) NOT NULL,
-   `msg` text NOT NULL
-   ) ENGINE=QUEUE;
+CREATE TABLE `queue_table` (`id` int(11) NOT NULL, `msg` text NOT NULL) ENGINE=QUEUE;
 
 """
-
- 

@@ -3,6 +3,7 @@
 import MySQLdb
 
 class Q4M(object):
+    """ Q4M operations wrapper class """
 
     def __init__(self, con):
         self.con = con

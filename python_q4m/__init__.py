@@ -2,7 +2,7 @@
 import python_q4m
 
 __author__  = "Tatsuhiko Kubo (cubicdaiya@gmail.com)"
-__version__ = "0.0.5"
+__version__ = "0.0.6"
 __license__ = "GPL2"
 __doc__     = """
 This module is simple Q4M operation wrapper developed by pixiv Inc. for asynchronous upload system
